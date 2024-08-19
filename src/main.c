@@ -19,7 +19,7 @@ char * gen_random_word()
 	return str;
 }
 
-int init_loop()
+void init_loop()
 {
 	char choice;
 start:
@@ -50,6 +50,8 @@ start:
 
 int main_loop()
 {
+	char * guess = (char *)malloc(10 * sizeof(char));
+
 	return EXIT_SUCCESS;
 }
 
