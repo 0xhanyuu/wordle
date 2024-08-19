@@ -6,4 +6,3 @@ potential inputs:
 	- any alphabetical character 
 	- the word 'exit' / 'quit' , etc.
 - a way to output the word and its contents each loop (i.e. correct / blank)
-- 
