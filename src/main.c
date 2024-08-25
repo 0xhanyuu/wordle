@@ -2,6 +2,7 @@
 #include <ctype.h> //tolower
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 char * dictionary[3] = { "cat", "dog", "word" };
 
@@ -33,8 +34,6 @@ start:
 	switch(choice)
 	{
 		case '1':
-		char * word = gen_random_word();
-		printf("word: %s\n", word);
 		break;
 
 		case '2':
@@ -48,7 +47,7 @@ start:
 	}
 }
 
-int main_loop()
+int main_loop(char * word, int word_size)
 {
 	char * guess = (char *)malloc(10 * sizeof(char));
 
@@ -67,8 +66,11 @@ int main()
 
 	init_loop();
 
-	while ( main_loop() != EXIT_SUCCESS )
-		main_loop();
+	char * word = gen_random_word();
+	int word_size = strlen(word);
+
+	while ( main_loop(word, word_size) != EXIT_SUCCESS )
+		main_loop(word, word_size);
 
 	end_loop();
 
