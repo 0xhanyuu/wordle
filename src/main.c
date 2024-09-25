@@ -30,7 +30,6 @@ start:
 	printf("start [1]	quit [2]\n");
 	printf("input: ");
 	scanf("%c", &choice);
-
 	switch(choice)
 	{
 		case '1':
@@ -49,14 +48,19 @@ start:
 
 int main_loop(char * word, int word_size)
 {
-	char * guess = (char *)malloc(10 * sizeof(char));
+	char guess[word_size];
+	printf("%s\n", "input a guess:");
+	scanf("%s", guess);
 
-	return EXIT_SUCCESS;
+	if ( strcmp(guess, word) == 0 )
+		return EXIT_SUCCESS;
+	else
+		return EXIT_FAILURE;
 }
 
 void end_loop()
 {
-
+	//
 }
 
 int main()
