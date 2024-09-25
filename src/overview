@@ -1,8 +1,17 @@
-overview:
+'main' seeds random function
 
-there should be:
-- a loop that prompts the user to input
-potential inputs:
-	- any alphabetical character 
-	- the word 'exit' / 'quit' , etc.
-- a way to output the word and its contents each loop (i.e. correct / blank)
+initial loop is called:
+	screen is cleared
+	user asked to input choice
+	returns a value
+
+gen_random_word is called:
+	a nullptr is initialised
+	a random word is chosen from dictionary
+	string is allocated to be the size of word
+	string is set to be the word + returned
+
+main_loop is called using word + word_size:
+	string 'guess' of size 'word_size' is declared
+	input is taken from user and stored in guess
+	respective value is returned if guess is correct
